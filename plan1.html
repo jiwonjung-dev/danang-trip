@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>다낭 두가족 겨울여행</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6f4;--card:#fff;--ink:#1d2a2e;--sub:#5d6b70;--line:#d5dcdc;--teal:#1b6b7a;--tealbg:#dcedf0;--or:#b8622a;--orbg:#f9e4d5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121a1c;--card:#1a2528;--ink:#e6eeee;--sub:#92a3a7;--line:#2e3d41;--teal:#5cb8c9;--tealbg:#1c3a40;--or:#e9955c;--orbg:#3b2a1e}}
+:root[data-theme="dark"]{--bg:#121a1c;--card:#1a2528;--ink:#e6eeee;--sub:#92a3a7;--line:#2e3d41;--teal:#5cb8c9;--tealbg:#1c3a40;--or:#e9955c;--orbg:#3b2a1e}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 "Noto Sans KR",system-ui,sans-serif}
+main{max-width:640px;margin:0 auto;padding:20px 16px 48px}
+h1{font:600 22px/1.3 "Noto Serif KR",serif;margin:8px 0 2px}
+.meta{color:var(--sub);font-size:13px;margin:0 0 16px}
+nav{display:flex;gap:6px;overflow-x:auto;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:8px 0;z-index:2}
+nav button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:6px 12px;font:inherit;font-size:13px;line-height:1.3;cursor:pointer;text-align:center}
+nav button b{display:block;font-size:15px}
+nav button[aria-selected=true]{background:var(--teal);border-color:var(--teal);color:#fff}
+nav button:focus-visible{outline:2px solid var(--or);outline-offset:2px}
+.head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin:14px 0 4px}
+.head h2{font:600 18px/1.4 "Noto Serif KR",serif;margin:0}
+.head p{margin:0;color:var(--sub);font-size:13px}
+.tag{flex:0 0 auto;background:var(--tealbg);color:var(--teal);font-size:12px;font-weight:700;border-radius:99px;padding:2px 10px}
+ol{list-style:none;margin:12px 0 0;padding:0 0 0 12px;border-left:2px solid var(--line)}
+li{position:relative;padding:0 0 16px 18px}
+li::before{content:"";position:absolute;left:-19px;top:7px;width:10px;height:10px;border-radius:50%;background:var(--teal)}
+li.p::before{background:var(--or)}
+.t{font-size:12px;color:var(--sub);font-variant-numeric:tabular-nums}
+.n{font-weight:500}
+.n i{font-style:normal;font-size:12px;color:var(--or);background:var(--orbg);border-radius:6px;padding:1px 7px;margin-left:6px;white-space:nowrap}
+.d{font-size:13px;color:var(--sub);margin-top:2px}
+.m{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.m a{font-size:12px;color:var(--teal);border:1px solid var(--teal);border-radius:99px;padding:2px 10px;text-decoration:none}
+.m a:focus-visible{outline:2px solid var(--or);outline-offset:2px}
+.tbl{overflow-x:auto;margin-top:8px}
+.r span{font-size:12px;color:var(--or);align-self:center}
+.r a{color:var(--or);border-color:var(--or)}
+.sh{font-size:12px;color:var(--teal);background:var(--tealbg);border-radius:8px;padding:6px 10px;margin-top:6px}
+.cards{display:grid;gap:10px;margin-top:10px}
+.c{background:var(--card);border:1px solid var(--line);padding:14px}
+.c small{display:block;color:var(--sub);font-size:12px}
+.c b{display:block;font-size:17px;margin:2px 0}
+.c span{font-size:13px;color:var(--sub)}
+.c ul,.src{margin:6px 0 0;padding-left:18px;font-size:13px}
+.c li,.src li{padding:0 0 6px;position:static}
+.c li::before,.src li::before{display:none}
+table{border-collapse:collapse;width:100%;min-width:520px;background:var(--card);font-size:13px}
+th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--sub);font-weight:500}
+td:last-child,th:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+td small{display:block;color:var(--sub);margin-top:2px}
+tfoot td{font-weight:700;border-top:2px solid var(--teal)}
+</style>
+</head>
+<body>
+<main>
+<p class="meta"><a href="index.html" style="color:var(--teal)">← 1안·2안 선택으로</a></p>
+<h1>다낭 두가족 겨울여행</h1>
+<p class="meta">주황 점은 비용이 드는 일정 · 🚌는 호텔 셔틀 대안 · 🍽는 식당 후보</p>
+<nav id="nav" role="tablist"></nav>
+<section id="view"></section>
+</main>
+<script>
+var D=[
+{k:"19",w:"화",t:"출국",tag:"기내",it:[
+["20:30","인천공항 제1터미널 집결, 수속","출발 3시간 전. 환전은 현지 한시장 금은방이 유리하니 소액만 준비."],
+["23:50","VJ875 출발","기내식 없음. 아이들 간식과 목베개 챙기기."]]},
+{k:"20",w:"수",t:"도착 · 시내 맛집 · 리조트 입실",tag:"0.5박 → 신라 모노그램",it:[
+["02:55","다낭 도착, 입국 후 픽업 차량 탑승","단독 7인승 1대(짐 4개 이하) 또는 그랩 2대."],
+["04:00","아보라 호텔 체크인, 취침","170 Bạch Đằng, 한강변. 공항에서 차 15분. 한시장까지 도보 5분. 1박으로 예약해 두면 새벽 입실이 확실합니다.","2실 64,472원"],
+["11:30","체크아웃, 짐 맡기고 점심: 분짜까 109","109 Nguyễn Chí Thanh, 아보라에서 도보 10분. 어묵국수 1인 4만 동. 아이가 국물을 싫어하면 호텔 옆 콩카페 거리 반미로."],
+["12:30","한시장 1차 쇼핑","분짜까에서 도보 8분. 라탄백, 건망고. 아오자이 맞춤은 첫날 주문해야 1/22 수령 가능."],
+["13:30","다낭 대성당 → 콩카페","한시장에서 대성당 도보 3분, 대성당에서 콩카페(96 Bạch Đằng) 도보 3분. 코코넛 커피."],
+["14:20","아보라에서 짐 찾고 그랩 7인승으로 신라 모노그램 이동","콩카페에서 아보라 도보 4분. 차로 30분(14km).","약 12,000원"],
+["15:00","신라 모노그램 체크인","1박 209,587원 × 3박 × 2실. 두 가족 커넥팅룸 요청.","3박 2실 1,257,522원"],
+["15:30","온수 패밀리풀, 모래놀이터","아이들은 리틀 모노그램 키즈클럽 이용 가능."],
+["17:45","그랩으로 미케비치 목식당 이동","해안도로로 25분 안팎(정확한 시간은 그랩 앱에서 확인). 리조트 주변에는 도보 식당이 없습니다.","약 13,000원"],
+["18:15","저녁: 목식당 (Hải sản Mộc Quán, 26 Tô Hiến Thành)","미케비치에서 도보 7~10분. 한국어 메뉴판, 에어컨 룸, 새우 요리 추천(크레이피시는 비싼 편). 10:30~22:30. 카카오톡에서 다낭 목식당을 검색해 날짜·시간·인원을 보내 예약."],
+["20:00","그랩으로 리조트 복귀","25분. 새벽 도착한 날이라 일찍 들어가 쉽니다.","약 13,000원"]]},
+{k:"21",w:"목",t:"오전 물놀이 · 바구니배 → 호이안 올드타운",tag:"신라 모노그램",it:[
+["08:00","조식 뷔페"],
+["09:00","온수풀, 해변 산책, 키즈클럽","1월 낮 기온 24도 전후, 아침저녁 19도. 물놀이 후 입힐 얇은 외투 준비."],
+["11:30","그랩 7인승으로 껌탄 코코넛마을 이동","해안도로로 20~25분. 리조트에서 올드타운 가는 길목이라 되돌아갈 일이 없습니다. 앱에서 GrabCar 7인승 선택, 안 잡히면 4인승 2대. 조식을 든든히 먹고 출발.","약 12,000원"],
+["12:00","코코넛마을 바구니배","마을 입장 3만 동, 배 1인 15만~20만 동 흥정. 배 3척, 40분. 뱃사공 쇼에 아이들 반응이 가장 좋습니다.","6인 약 75,000원"],
+["13:15","그랩으로 올드타운 이동","10분(4.5km). 안호이 다리 남단 주차장(Nguyễn Hoàng 거리)에서 하차.","약 6,000원"],
+["13:30","늦은 점심: 모닝글로리 오리지널 (106 Nguyễn Thái Học)","주차장에서 안호이 다리 건너 도보 3분. 까오러우, 화이트로즈, 아이용 볶음밥. 가볍게 먹으려면 반미 프엉(2B Phan Châu Trinh, 도보 8분)."],
+["14:30","올드타운 입장권, 내원교, 풍흥고가, 카페 휴식","모닝글로리에서 내원교 도보 4분. 올드타운 전체가 가로세로 600m라 모든 곳이 도보 10분 안.","입장권 6인 약 39,000원"],
+["17:30","저녁: 미스 리 (22 Nguyễn Huệ)","내원교에서 도보 8분, 호이안 시장 옆. 까오러우와 화이트로즈. 대기 길면 같은 골목 반미 프엉 다시."],
+["18:30","해질 무렵 소원배, 야시장","미스 리에서 강변까지 도보 3분. 소원배는 안호이 다리 아래에서 탑승, 야시장은 다리 건너 바로. 1척 15만~20만 동 흥정.","2척 약 22,000원"],
+["20:30","주차장으로 걸어가 그랩 호출, 리조트 복귀","야시장에서 주차장 도보 3분. 보행자 구역 안에서는 안 잡힙니다. 리조트까지 20분(11km). 비 오는 날은 20:00에 미리 호출.","약 13,000원"]]},
+{k:"22",w:"금",t:"미케비치 점심 · 롯데마트 · 한시장 · 용다리 불쇼",tag:"신라 모노그램",it:[
+["08:00","조식 후 온수풀"],
+["11:15","그랩으로 미케비치 벱꾸온 이동","해안도로로 20분(13km).","약 12,000원"],
+["11:45","점심: 벱꾸온 (Bếp Cuốn, 31-33 Trần Bạch Đằng)","미슐랭 빕구르망. 넴루이, 반쎄오, 분짜 세트. 1인 1만 원 이하. 식후 미케비치까지 도보 3분, 모래놀이 30분."],
+["13:45","그랩으로 롯데마트 이동","20분(7km). 띠엔선 다리 건너 남쪽.","약 10,000원"],
+["14:10","롯데마트 쇼핑","G7·쭝응우옌 커피, 비나밋 건과일, 코코넛 과자, 망고 젤리. 산 짐은 한시장·저녁·불쇼까지 들고 다녀야 하니 부피 큰 건 줄이고, 많으면 마트 앞에서 그랩 익스프레스로 리조트에 먼저 보내기(약 1만 원)."],
+["16:00","그랩으로 한시장 이동","12분(4km).","약 7,000원"],
+["16:15","한시장 2차 쇼핑, 아오자이 수령"],
+["18:00","저녁: 냐벱 (Nhà Bếp, 22 Hùng Vương) 또는 피자 포피스 인도차이나점 (74 Bạch Đằng)","냐벱은 한시장에서 도보 1분, 베트남 가정식. 피자 포피스는 한시장에서 도보 3분, 아이들 무난. 둘 다 용다리까지 강변 따라 도보 10분."],
+["20:40","강변 따라 용다리로 이동, 불쇼 자리 잡기","도보 10분. 금·토·일 21시. 다리 위는 통제되니 강변 동쪽 인도에서 관람."],
+["21:30","용다리 동단에서 그랩 호출, 리조트 복귀","25분(14km). 불쇼 직후 호출 몰리니 다리 동쪽으로 건너가 호출.","약 13,000원"]]},
+{k:"23",w:"토",t:"마지막 물놀이 · 귀국",tag:"귀국",it:[
+["08:00","조식"],
+["09:00","온수풀 마지막 물놀이","레이트 체크아웃(14시) 가능 여부를 체크인 때 미리 요청."],
+["11:30","체크아웃, 그랩으로 시내 이동","30분(13km). 공항이 시내 서쪽 바로 옆이라 점심을 시내에서 먹고 가는 동선이 자연스럽습니다.","약 12,000원"],
+["12:00","점심: 반쎄오 바즈엉 (280/23 Hoàng Diệu) 또는 마담 란 (4 Bạch Đằng)","반쎄오 바즈엉은 골목 끝 로컬집, 미슐랭 빕구르망, 공항까지 차 10분(3km). 마담 란은 강변 북쪽 정원식 식당, 공항까지 차 15분(4km). 두 곳은 서로 차 8분 거리라 한 곳만 고르세요."],
+["13:30","공항 이동","10~15분.","약 8,000원"],
+["14:00","다낭공항 도착, 수속"],
+["16:20","VJ874 출발 → 22:40 인천 도착"]]}
+];
+var B=[
+["항공권 6명 (왕복)","비엣젯 VJ875 / VJ874 예매 화면 기준","성인 444,100원 × 4 · 어린이 442,600원 × 2. 위탁수하물 별도.","2,661,600"],
+["0.5박 아보라 호텔 2실","아고다 1/19 체크인 1박, 어른 2 + 아동 1, 세금 제외 표시가","1실 32,236원. 6~11세 아동 1박 150,000동은 현장 결제.","64,472"],
+["신라 모노그램 3박 2실","아고다 1/20~23 최저 객실, 세금·봉사료 제외 표시가","1박 209,587원 × 3박 × 2실. 세금·봉사료 포함 시 약 1,452,000원.","1,257,522"],
+["아동 추가요금 (호텔 정책)","6~12세 조식 + 간이침대 1박 577,500동","3박 × 2명. 예약 요금에 이미 포함됐으면 제외.","187,000"],
+["새벽 공항 픽업","단독 7인승 1대, 23시 이후 할증 포함","그랩 2대 이용 시 약 20,000원.","25,000"],
+["그랩 이동 12회","7인승 기준 시내 편도 7,000~13,000원","1/20 3회 38,000 · 1/21 3회 31,000 · 1/22 4회 42,000 · 1/23 2회 20,000. 야간·우천 할증 시 10~20% 추가.","131,000"],
+["호이안 현지 요금","마을 입장, 바구니배 6명, 올드타운 입장권 6명, 소원배 2척","약 2,500,000동.","135,000"],
+["식비 (추정)","1인 1일 30,000원 × 6명 × 3.5일","조식은 리조트 포함, 점심·저녁은 모두 밖에서.","630,000"],
+["쇼핑","한시장, 롯데마트","","별도"]];
+var nav=document.getElementById("nav"),view=document.getElementById("view");
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+var MQ="Hải sản Mộc Quán 26 Tô Hiến Thành Đà Nẵng",IA="Incheon International Airport Terminal 1",DA="Da Nang International Airport",SH="Shilla Monogram Quangnam Danang",HM="Han Market Da Nang",LM="Lotte Mart Da Nang",DB="Dragon Bridge Da Nang",MK="My Khe Beach Da Nang",CT="Cam Thanh Coconut Village Hoi An";
+var M={
+"19-20:30":[["인천공항 T1",IA]],
+"20-02:55":[["다낭공항",DA]],
+"20-04:00":[["아보라 호텔","Abora Hotel 170 Bạch Đằng Đà Nẵng"]],
+"20-11:30":[["분짜까 109","Bún chả cá 109 Nguyễn Chí Thanh Đà Nẵng"]],
+"20-12:30":[["한시장",HM]],
+"20-13:30":[["다낭 대성당","Da Nang Cathedral"],["콩카페","Cộng Cà Phê 96 Bạch Đằng Đà Nẵng"]],
+"20-14:20":[["아보라 호텔","Abora Hotel 170 Bạch Đằng Đà Nẵng"],["신라 모노그램",SH]],
+"20-15:00":[["신라 모노그램",SH]],
+"20-17:45":[["목식당",MQ]],
+"20-18:15":[["목식당",MQ]],
+"20-20:00":[["신라 모노그램",SH]],
+"21-11:30":[["코코넛마을",CT]],
+"21-12:00":[["코코넛마을",CT]],
+"21-13:15":[["안호이 다리","An Hoi Bridge Hoi An"]],
+"21-13:30":[["모닝글로리","Morning Glory Original 106 Nguyễn Thái Học Hội An"],["반미 프엉","Bánh Mì Phượng 2B Phan Châu Trinh Hội An"]],
+"21-14:30":[["내원교","Japanese Covered Bridge Hoi An"],["풍흥고가","Phung Hung Old House Hoi An"]],
+"21-17:30":[["미스 리","Miss Ly Cafeteria 22 Nguyễn Huệ Hội An"]],
+"21-18:30":[["야시장","Hoi An Night Market"]],
+"21-20:30":[["안호이 다리","An Hoi Bridge Hoi An"],["신라 모노그램",SH]],
+"22-11:15":[["벱꾸온","Bếp Cuốn 31-33 Trần Bạch Đằng Đà Nẵng"]],
+"22-11:45":[["벱꾸온","Bếp Cuốn 31-33 Trần Bạch Đằng Đà Nẵng"],["미케비치",MK]],
+"22-13:45":[["롯데마트",LM]],
+"22-14:10":[["롯데마트",LM]],
+"22-16:00":[["한시장",HM]],
+"22-16:15":[["한시장",HM]],
+"22-18:00":[["냐벱","Nhà Bếp 22 Hùng Vương Đà Nẵng"],["피자 포피스","Pizza 4P's Indochina 74 Bạch Đằng Đà Nẵng"]],
+"22-20:40":[["용다리",DB]],
+"22-21:30":[["용다리",DB]],
+"23-12:00":[["반쎄오 바즈엉","Bánh xèo Bà Dưỡng 280/23 Hoàng Diệu Đà Nẵng"],["마담 란","Madame Lân 4 Bạch Đằng Đà Nẵng"]],
+"23-13:30":[["다낭공항",DA]],
+"23-14:00":[["다낭공항",DA]]
+};
+var SU={
+"20-14:20":"첫날은 그랩 추천. 셔틀은 출발 4시간 전까지 예약해야 하고, 도착 전에 호텔에 미리 요청이 가능한지 확인 필요. 아보라 짐을 타워까지 들고 가야 함(15:00 타워 출발).",
+"21-11:30":"호이안은 15:30 셔틀(358 Nguyễn Duy Hiếu 하차)도 가능. 이 경우 오전은 리조트에서 놀고 바구니배는 빼고 올드타운만 다녀옵니다. 복귀는 19:00 셔틀 또는 그랩.",
+"21-20:30":"19:00 셔틀로 돌아오려면 소원배·저녁을 17:45~18:45로 앞당기고 18:45까지 하차지로 이동. 늦게까지 있고 싶으면 그랩 복귀.",
+"22-11:15":"12:00 셔틀로 시내(Indochina Riverside Tower, 74 Bạch Đằng 쪽, 한시장 근처)까지 갈 수 있음. 이 경우 미케 점심 대신 시내 점심(냐벱·피자 포피스), 한시장·아오자이 수령. 복귀는 15:00 또는 17:00 셔틀.",
+"22-13:45":"롯데마트는 셔틀 노선 밖이라 그랩 이용.",
+"22-21:30":"셔틀은 17:00이 막차라 밤 복귀(용다리 불쇼)는 그랩만 가능."};
+function su(k,t){var a=SU[k+"-"+t];return a?'<div class="sh">🚌 셔틀 대안: '+a+'</div>':""}
+var RT=[
+["다낭 시내 · 한시장 권역","한시장에서 도보 10분 안쪽이 대부분",[
+["분짜까 109","어묵국수 1인 4만 동. 1/20 점심","Bún chả cá 109 Nguyễn Chí Thanh Đà Nẵng"],
+["포박하이","쌀국수. 한시장 근처, 아침 6시부터 영업","Phở Bắc Hải Đà Nẵng"],
+["쩌비엣","반쎄오. 한시장 근처, 한국어 메뉴판","쩌비엣 다낭"],
+["반미 해피 브레드","반미. 한시장·핑크 성당 근처","다낭 반미 해피 브레드"],
+["냐벱","베트남 가정식. 한시장 도보 1분","Nhà Bếp 22 Hùng Vương Đà Nẵng"],
+["피자 포피스","아이들 무난. 74 Bạch Đằng","Pizza 4P's Indochina 74 Bạch Đằng Đà Nẵng"],
+["반쎄오 바즈엉","골목 끝 로컬집, 공항 차 10분. 귀국일 점심","Bánh xèo Bà Dưỡng 280/23 Hoàng Diệu Đà Nẵng"],
+["마담 란","강변 정원식 식당, 공항 차 15분","Madame Lân 4 Bạch Đằng Đà Nẵng"]]],
+["미케비치 · 해안도로","리조트에서 차 20~25분. 미케 쪽이라 그랩 목적지만 바꾸면 됨",[
+["목식당","Hải sản Mộc Quán. 해산물 전문, 한국어 메뉴판, 새우 요리 추천. 10:30~22:30. 26 Tô Hiến Thành","Hải sản Mộc Quán 26 Tô Hiến Thành Đà Nẵng"],
+["벱꾸온","미슐랭 빕구르망. 넴루이, 반쎄오, 분짜 세트","Bếp Cuốn 31-33 Trần Bạch Đằng Đà Nẵng"],
+["웃번 껌떰","Cơm Tấm Út Vân. 미슐랭 선정. 양념 돼지갈비덮밥, 닭고기덮밥, 반쎄오, 닭죽. 117 Hồ Xuân Hương","Cơm Tấm Út Vân 117 Hồ Xuân Hương Đà Nẵng"],
+["바빌론 스테이크 1호점","스테이크 200~400g 선택, 아기 의자·영어 메뉴판, 10~22시. 422 Võ Nguyên Giáp","Babylon Steak Garden 422 Võ Nguyên Giáp Đà Nẵng"],
+["바빌론 스테이크 2호점","미케 해변에서 차로 2분. 18 Phạm Văn Đồng","Babylon Steak Garden 18 Phạm Văn Đồng Đà Nẵng"]]],
+["호이안 올드타운","서로 도보 8분 안쪽",[
+["모닝글로리","까오러우, 화이트로즈, 아이용 볶음밥. 106 Nguyễn Thái Học","Morning Glory Original 106 Nguyễn Thái Học Hội An"],
+["미스 리","까오러우와 화이트로즈. 22 Nguyễn Huệ","Miss Ly Cafeteria 22 Nguyễn Huệ Hội An"],
+["반미 프엉","가볍게 먹기. 2B Phan Châu Trinh","Bánh Mì Phượng 2B Phan Châu Trinh Hội An"],
+["껌린","Cơm Linh. 오리구이가 후기에 자주 나옴. 위치·영업시간은 지도에서 확인","Cơm Linh Hội An"],
+["QQ 레스토랑","후기 글에 소개된 곳. 위치·영업시간은 지도에서 확인","QQ Restaurant Hội An"]]]];
+var QM={};RT.forEach(function(g){g[2].forEach(function(r){QM[r[0]]=r[2]})});
+var RC={"20-11:30":["포박하이","쩌비엣","반미 해피 브레드"],"20-18:15":["바빌론 스테이크 1호점","웃번 껌떰"],"21-13:30":["껌린","QQ 레스토랑"],"21-17:30":["반미 프엉","껌린","QQ 레스토랑"],"22-11:45":["웃번 껌떰","바빌론 스테이크 1호점"],"22-18:00":["바빌론 스테이크 2호점"],"23-12:00":["쩌비엣","포박하이"]};
+function lk(n,q,c){return '<a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)+'" target="_blank" rel="noopener">'+c+n+'</a>'}
+function rc(k,t){var a=RC[k+"-"+t];return a?'<div class="m r"><span>🍽 다른 후보</span>'+a.map(function(n){return lk(n,QM[n],"📍 ")}).join("")+'</div>':""}
+function maps(k,t){var a=M[k+"-"+t];return a?'<div class="m">'+a.map(function(p){return '<a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p[1])+'" target="_blank" rel="noopener">📍 '+p[0]+'</a>'}).join("")+'</div>':""}
+var OV=[["항공권 6명 왕복","2,661,600원","성인 444,100 × 4 + 어린이 442,600 × 2, 세금·수수료 포함"],
+["숙박비 (2실 합계, 세금 제외 표시가)","약 151만 원","0.5박 6.4만 + 신라 3박 125.8만 + 아동 요금 18.7만. 세금·봉사료 포함 시 약 170만"],
+["이동 + 호이안 현지요금","약 29만 원","공항 픽업, 그랩 12회, 바구니배·입장권·소원배"],
+["총예산 (항공 포함, 쇼핑 제외)","약 509~529만 원","낮은 값은 숙박 세금 제외 표시가, 높은 값은 세금·봉사료 포함. 식비 추정 63만 포함"],
+["가족당 부담","약 255~264만 원","항공 포함, 쇼핑 제외"]];
+var FL=[["비엣젯 VJ875 · 1월 19일 (화) · 직항 5시간 5분","인천 23:50 → 다낭 02:55 (+1일)","1월 20일 새벽 도착. 입국심사와 수하물까지 40~50분 예상."],
+["비엣젯 VJ874 · 1월 23일 (토) · 직항 4시간 20분","다낭 16:20 → 인천 22:40","14:00까지 공항 도착. 신라 모노그램에서 공항까지 차로 30분."]];
+var CK=[["신라 모노그램",["이 표의 아고다 금액은 2026년 9월 29일 비로그인 웹 기준 세금 제외 표시가. 실제 결제 화면은 세금·봉사료 약 15.5%가 붙고, 앱·회원가·조회 시점에 따라 오르내림","1월 패밀리풀 온수 운영 여부와 수온을 예약 전 호텔에 문의","두 가족 커넥팅룸 또는 같은 층 배정 요청","아동 요금이 예약 금액에 포함됐는지 확인","레이트 체크아웃 가능 여부와 요금"]],
+["0.5박 숙소 대안",["아보라 호텔 32,236원: 가장 저렴, 한시장 도보권","그랜드브리오 시티 53,826원: 시내 4성, 조식 없음","브릴리언트 호텔 73,689원: 한강뷰, 조식 좋음","픽업 포함 0.5박 패키지 상품은 실제 결제 화면에서 객실당 금액 확인"]],
+["호이안 직접 이동 팁",["그랩 앱에서 7인승(GrabCar 7) 선택, 결제 카드 미리 등록","올드타운은 보행자 구역이라 호출은 큰길(안호이 다리 주차장쪽)에서","바구니배·소원배는 흥정. 부르는 값의 60~70%에서 시작","이동이 부담되면 와그 호이안 왕복 셔틀(신라 모노그램 16:55 픽업, 21:00 복귀, 1인 약 7,400원)로 대체 가능","가이드가 필요하면 와그 단독투어 6인 약 258,000원 (오행산 포함)"]],
+["식당 위치 (리조트 기준 차량)",["한시장 권역 30분: 분짜까 109, 냐벱, 피자 포피스, 콩카페 (서로 도보 10분 안)","미케비치 쪽 20~25분: 목식당, 벱꾸온","시내 외곽 30분: 반쎄오 바즈엉, 마담 란 (공항 10~15분, 귀국일 용)","호이안 올드타운 20분: 모닝글로리, 반미 프엉, 미스 리 (서로 도보 8분 안)","도보 시간은 구글맵 기준, 아이 걸음이면 1.3배로 잡기"]],
+["짐과 준비물",["비엣젯 위탁수하물 사전 구매","아이 수영복, 래시가드, 물놀이 후 외투","그랩 앱 설치와 해외결제 카드 등록","아오자이 맞춤은 첫날 주문"]]];
+var SRC=["아고다 신라 모노그램 다낭","아고다 아보라 호텔 · 그랜드브리오 시티 · 브릴리언트 호텔","와그 호이안 왕복 셔틀 (신라 모노그램 경유) · 와그 호이안 단독 투어","트립스토어 호이안 바구니배 가격·흥정 · MayBay 다낭↔호이안 그랩 비용","마이리얼트립 다낭 0.5박 + 공항 픽업","바나힐 입장권 가격 가이드","신라 모노그램 온수 패밀리풀·키즈클럽 안내"];
+var T=["ov",0,1,2,3,4,"rs","bd","sh","ck"],TL={rs:["식당","🍽"],ov:["개요","≡"],bd:["예산","₩"],sh:["셔틀","🚌"],ck:["확인","✓"]};
+function show(i){
+  [].forEach.call(nav.children,function(b,j){b.setAttribute("aria-selected",j===i)});
+  var k=T[i],h="";
+  if(k==="ov"){
+    h='<div class="head"><div><h2>2027년 1월 19일 ~ 23일</h2><p>인천 출발 · 2가족 6명</p></div></div><p class="d">새벽 도착 0.5박 후 신라 모노그램 3박. 온수풀에서 아이들 물놀이, 식사는 매번 그랩으로 나가서 시내·미케·호이안 맛집, 호이안은 투어 없이 직접 이동.</p><p class="d">어른 4명 · 초등학생 2명 / 가족당 1실, 총 2실 / 요금 조회일 2026년 9월 29일 / 환율 가정 1,000동 ≈ 54원</p><div class="cards">'+OV.map(function(c){return '<div class="c"><small>'+c[0]+'</small><b>'+c[1]+'</b><span>'+c[2]+'</span></div>'}).join("")+'</div><div class="head"><div><h2>항공</h2></div></div><div class="cards">'+FL.map(function(c){return '<div class="c"><small>'+c[0]+'</small><b>'+c[1]+'</b><span>'+c[2]+'</span></div>'}).join("")+'</div><p class="d">예매 화면 기준 6명 왕복 2,661,600원. 비엣젯은 위탁수하물이 별도 구매인 경우가 많으니 결제 전 포함 여부를 확인하세요.</p>';
+  }else if(k==="sh"){
+    h='<div class="head"><div><h2>신라 모노그램 셔틀버스</h2><p>그랩 대신 고를 수 있는 이동 수단</p></div></div><div class="tbl"><table><thead><tr><th>구간</th><th>호텔 출발</th><th>현지 출발(복귀)</th></tr></thead><tbody><tr><td>다낭 시내<small>Indochina Riverside Tower (Phan Đình Phùng 쪽 게이트)</small></td><td>10:00 / 12:00 / 14:00</td><td>13:00 / 15:00 / 17:00</td></tr><tr><td>호이안<small>358 Nguyễn Duy Hiếu (Yaly Couture)</small></td><td>15:30</td><td>19:00</td></tr></tbody></table></div><p class="d">시간표의 Leaving은 호텔 출발, Returning은 현지에서 호텔로 돌아오는 출발 시각으로 읽었습니다. 프런트에서 한 번 확인하세요.</p><div class="cards"><div class="c"><small>요금</small><b>1석 113,400동 (약 6,100원)</b><span>편도인지 왕복인지, 아이 요금은 시간표에 없음. 6명 기준 약 36,700원으로, 그랩 7인승 한 번(약 12,000원)보다 비쌉니다.</span></div><div class="c"><b>이용 규정</b><ul><li>출발 4시간 전까지 예약</li><li>탑승 시 티켓 제시</li><li>정시 출발, 늦거나 없어도 기다리지 않음</li></ul></div><div class="c"><b>셔틀이 맞는 날</b><ul><li>1/22 낮 시내 일정만 할 때: 12:00 출발, 15:00 또는 17:00 복귀</li><li>호이안 올드타운만 갈 때: 15:30 출발</li></ul></div><div class="c"><b>그랩이 맞는 날</b><ul><li>첫날(1/20): 새벽 도착 후 짐 이동</li><li>1/21 바구니배 코스, 1/22 롯데마트·용다리 불쇼</li><li>막차가 17:00(시내), 19:00(호이안)이라 밤 복귀</li><li>호이안 야경은 와그 셔틀(21:00 복귀)이 더 늦게까지 가능</li></ul></div></div>';
+  }else if(k==="ck"){
+    h='<div class="head"><div><h2>예약 전 확인할 것</h2></div></div><div class="cards">'+CK.map(function(c){return '<div class="c"><b>'+c[0]+'</b><ul>'+c[1].map(function(x){return '<li>'+esc(x)+'</li>'}).join("")+'</ul></div>'}).join("")+'</div><div class="head"><div><h2>요금 출처</h2><p>2026년 9월 29일 조회</p></div></div><ul class="src">'+SRC.map(function(x){return '<li>'+x+'</li>'}).join("")+'</ul>';
+  }else if(k==="rs"){
+    h='<div class="head"><div><h2>식당 모음</h2><p>지도 버튼으로 바로 위치 확인 · 영업시간은 가기 전 지도에서 확인</p></div></div>'+RT.map(function(g){return '<div class="head"><div><h2>'+g[0]+'</h2><p>'+g[1]+'</p></div></div><div class="cards">'+g[2].map(function(r){return '<div class="c"><b>'+r[0]+'</b><span>'+esc(r[1])+'</span><div class="m">'+lk("지도",r[2],"📍 ")+'</div></div>'}).join("")+'</div>'}).join("");
+  }else if(k==="bd"){
+    var r=B.map(function(x){return "<tr><td>"+esc(x[0])+"</td><td>"+esc(x[1])+(x[2]?"<small>"+esc(x[2])+"</small>":"")+"</td><td>"+x[3]+"</td></tr>"}).join("");
+    h='<div class="head"><div><h2>예산표 (2가족 6명 합계)</h2></div></div><div class="tbl"><table><thead><tr><th>항목</th><th>근거</th><th>금액(원)</th></tr></thead><tbody>'+r+'</tbody><tfoot><tr><td>합계 (항공 포함, 쇼핑 제외)</td><td>가족당 약 2,546,000원<small>항공 제외 시 2,429,994원. 숙박 세금·봉사료 포함 시 약 5,287,000원, 가족당 약 2,643,000원.</small></td><td>5,091,594</td></tr></tfoot></table></div>';
+  }else{
+    var d=D[k];
+    h='<div class="head"><div><h2>1월 '+d.k+'일 ('+d.w+')</h2><p>'+esc(d.t)+'</p></div><span class="tag">'+esc(d.tag)+'</span></div><ol>'+d.it.map(function(x){
+      return '<li'+(x[3]?' class="p"':'')+'><div class="t">'+x[0]+'</div><div class="n">'+esc(x[1])+(x[3]?'<i>'+esc(x[3])+'</i>':'')+'</div>'+(x[2]?'<div class="d">'+esc(x[2])+'</div>':'')+su(d.k,x[0])+maps(d.k,x[0])+rc(d.k,x[0])+'</li>'}).join("")+'</ol>';
+  }
+  view.innerHTML=h;window.scrollTo(0,0);
+}
+T.forEach(function(k,i){var b=document.createElement("button");b.setAttribute("role","tab");b.innerHTML=typeof k==="number"?"<b>"+D[k].k+"</b>"+D[k].w:"<b>"+TL[k][1]+"</b>"+TL[k][0];b.onclick=function(){show(i)};nav.appendChild(b)});
+show(0);
+</script>
+</body>
+</html>
