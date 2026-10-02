@@ -6,28 +6,61 @@
 <title>다낭 두가족 겨울여행</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f4f6f4;--card:#fff;--ink:#1d2a2e;--sub:#5d6b70;--line:#d5dcdc;--teal:#1b6b7a;--tealbg:#dcedf0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root{--bg:#121a1c;--card:#1a2528;--ink:#e6eeee;--sub:#92a3a7;--line:#2e3d41;--teal:#5cb8c9;--tealbg:#1c3a40}}
+/* 한 열 안내판: 비교 카드(넓게) → 2안·3안 카드 */
+:root{--bg:#f4f6f4;--card:#fff;--ink:#1d2a2e;--sub:#5d6b70;--line:#d5dcdc;--teal:#1b6b7a;--tealbg:#dcedf0;--or:#b8622a;--orbg:#f9e4d5;
+--serif:"Noto Serif KR",Georgia,serif;--sans:"Noto Sans KR",system-ui,-apple-system,"Malgun Gothic",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121a1c;--card:#1a2528;--ink:#e6eeee;--sub:#92a3a7;--line:#2e3d41;--teal:#5cb8c9;--tealbg:#1c3a40;--or:#e9955c;--orbg:#3b2a1e;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121a1c;--card:#1a2528;--ink:#e6eeee;--sub:#92a3a7;--line:#2e3d41;--teal:#5cb8c9;--tealbg:#1c3a40;--or:#e9955c;--orbg:#3b2a1e;color-scheme:dark}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 "Noto Sans KR",system-ui,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 var(--sans)}
 main{max-width:560px;margin:0 auto;padding:28px 16px 48px}
-h1{font:600 24px/1.3 "Noto Serif KR",serif;margin:0 0 4px}
+h1{font:600 24px/1.3 var(--serif);margin:0 0 4px;text-wrap:balance}
 .sub{color:var(--sub);font-size:13px;margin:0 0 20px}
-a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:12px;color:inherit;text-decoration:none}
+.list{display:grid;gap:12px}
+a.card{display:flex;flex-direction:column;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;color:inherit;text-decoration:none}
+a.card:hover{border-color:var(--teal)}
 a.card:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
-.tag{display:inline-block;background:var(--tealbg);color:var(--teal);font-size:12px;font-weight:700;border-radius:99px;padding:2px 10px}
-a.card h2{font:600 18px/1.4 "Noto Serif KR",serif;margin:8px 0 4px}
+a.cmp{background:var(--tealbg);border-color:var(--teal)}
+.tag{align-self:flex-start;background:var(--tealbg);color:var(--teal);font-size:12px;font-weight:700;border-radius:99px;padding:2px 10px}
+a.cmp .tag{background:var(--teal);color:var(--card)}
+a.card h2{font:600 18px/1.4 var(--serif);margin:4px 0 0}
 a.card p{margin:0;color:var(--sub);font-size:13px}
-a.card b{display:block;font-size:17px;margin-top:10px}
-.go{color:var(--teal);font-size:13px;font-weight:700;margin-top:8px;display:block}
+.row{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:8px;font-variant-numeric:tabular-nums}
+.row b{font-size:17px}
+.row span{color:var(--sub);font-size:13px;align-self:center}
+.go{color:var(--teal);font-size:13px;font-weight:700;margin-top:6px}
+.note{color:var(--sub);font-size:12px;margin-top:20px}
 </style>
 </head>
 <body>
 <main>
 <h1>다낭 두가족 겨울여행</h1>
-<p class="sub">2027년 1월 19일 ~ 23일 · 인천 출발 · 2가족 6명</p>
-<a class="card" href="plan1.html"><span class="tag">1안</span><h2>신라 모노그램 3박</h2><p>아보라 0.5박 후 신라에서 3박. 온수풀과 키즈클럽을 마지막 날 아침까지 이용.</p><b>가족당 약 255~264만 원</b><span class="go">1안 보기 →</span></a>
-<a class="card" href="plan2.html"><span class="tag">2안</span><h2>신라 2박 + 힐튼 다낭 1박</h2><p>마지막 밤은 시내 힐튼. 공항이 가깝고 용다리 불쇼 후 복귀가 짧음. 힐튼 요금은 추정치.</p><b>가족당 약 244~251만 원</b><span class="go">2안 보기 →</span></a>
+<p class="sub">2027년 1월 19일 ~ 23일 · 인천 출발 · 2가족 6명 (어른 4 · 초등학생 2)</p>
+<div class="list">
+  <a class="card cmp" href="compare.html">
+    <span class="tag">비교</span>
+    <h2>2안 · 3안 한눈에 비교</h2>
+    <p>같은 날과 다른 날, 숫자, 비용을 한 페이지에 모았습니다. 두 가족이 같이 보고 고르기 좋아요.</p>
+    <div class="row"><span>비용 차이 약 22만 원 (가족당 약 11만 원)</span></div>
+    <span class="go">비교 보기 →</span>
+  </a>
+  <a class="card" href="plan2.html">
+    <span class="tag">2안</span>
+    <h2>신라 2박 + 힐튼 1박</h2>
+    <p>22일에 시내 힐튼으로 옮겨 한시장·롯데마트 쇼핑과 한강 유람선 불쇼. 23일은 공항까지 10~15분.</p>
+    <div class="row"><b>가족당 약 264만 원</b><span>6명 5,280,982원</span></div>
+    <span class="go">2안 일정 보기 →</span>
+  </a>
+  <a class="card" href="plan3.html">
+    <span class="tag">3안</span>
+    <h2>신라 3박 + 휴식일</h2>
+    <p>22일 낮은 리조트에서 수영·낮잠·호텔 스파. 짐은 한 번만 옮기고 23일 아침까지 수영.</p>
+    <div class="row"><b>가족당 약 275만 원</b><span>6명 5,500,107원</span></div>
+    <span class="go">3안 일정 보기 →</span>
+  </a>
+</div>
+<p class="note">항공 포함, 쇼핑 제외. 숙소는 모두 세금 포함 금액. 요금 조회일 2026년 9월 29일 ~ 10월 2일.</p>
 </main>
 </body>
 </html>
