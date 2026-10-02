@@ -68,6 +68,11 @@ nav button.dfd b::after{content:"";display:inline-block;width:6px;height:6px;bor
 .ps{margin:8px 0 0;font-size:13px;color:var(--teal)}
 .mn{font-size:13px;color:var(--ink);background:var(--tealbg);border-radius:8px;padding:5px 10px;margin-top:6px}
 .c .mn{margin-top:8px}
+.m a.md{color:var(--or);border-color:var(--or)}
+.th{margin:8px 0 0;max-width:320px}
+.th img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:10px;background:var(--line)}
+.th figcaption{font-size:11px;color:var(--sub);margin-top:3px}
+.th figcaption a{color:var(--sub)}
 .sh{font-size:12px;color:var(--teal);background:var(--tealbg);border-radius:8px;padding:6px 10px;margin-top:6px}
 .cards{display:grid;gap:10px;margin-top:10px}
 .c{background:var(--card);border:1px solid var(--line);padding:14px}
@@ -108,7 +113,7 @@ var D=[
 ["15:30","M 빌리지에서 짐 찾고 그랩 7인승으로 신라 모노그램 이동","한시장 쪽에서 M 빌리지까지 도보(지도에서 확인). 신라까지 차로 30분 안팎.","약 12,000원"],
 ["16:00","신라 모노그램 체크인","스파·어린이 조식 포함 호텔 패키지, 2실 3박 32,336,352동. 두 가족 커넥팅룸 요청.","3박 2실 약 1,746,000원"],
 ["16:30","온수 패밀리풀, 모래놀이터, 키즈클럽","오늘은 체크인 후 밖에 나가지 않고 리조트에서 놉니다. 아이들은 리틀 모노그램 키즈클럽 이용 가능."],
-["18:30","저녁: 배달 음식 (그랩 푸드 등)","새벽 도착한 날이라 체크인 후에는 밖에 나가지 않고 리조트에서 먹고 일찍 쉽니다. 호텔까지 배달 가능(확인함), 음식은 호텔의 배달 음식 픽업 장소에서 수령. 앱의 기사 메모에 Shilla Monogram Main Lobby처럼 영문으로 적으면 수월. 아이들은 피자·치킨·햄버거 프랜차이즈나 한식당, 반미가 무난. 배달료·시간은 앱에서 확인. 안 되면 리조트 레스토랑이나 룸서비스로."]]},
+["18:30","저녁: 배달 음식 (그랩 푸드 등)","새벽 도착한 날이라 체크인 후에는 밖에 나가지 않고 리조트에서 먹고 일찍 쉽니다. 호텔까지 배달 가능(확인함), 음식은 호텔의 배달 음식 픽업 장소에서 수령. 앱의 기사 메모에 Shilla Monogram Main Lobby처럼 영문으로 적으면 수월. 아이들은 피자·치킨·햄버거 프랜차이즈나 한식당, 반미가 무난. 배달료·시간은 앱에서 확인. 냐벱도 카톡 채널로 배달 주문을 받는데(다낭 전 지역, 50만 동 이상 배달비 무료) 신라까지 오는지는 미리 물어보기. 안 되면 리조트 레스토랑이나 룸서비스로."]]},
 {k:"21",w:"목",t:"오전 물놀이 · 바구니배 → 호이안 올드타운",tag:"신라 모노그램",it:[
 ["08:00","조식 뷔페"],
 ["09:00","온수풀, 해변 산책, 키즈클럽","1월 낮 기온 24도 전후, 아침저녁 19도. 물놀이 후 입힐 얇은 외투 준비."],
@@ -190,7 +195,7 @@ var SB={"20-13:30":[
 ["🥖","반미코티엔","소고기치즈·계란 반미가 유명. 포장해서 신라 간식으로. 한시장 도보 5분이라는 후기, 주소는 출처마다 달라 지도에서 확인.","Bánh Mì Cô Tiên Đà Nẵng"],
 ["🥭","미미프루츠 한시장점 (3 Trần Quốc Toản)","손질한 열대과일·망고 도시락 테이크아웃. 신라에서 먹을 과일과 22일 휴식일 과일까지 포장. 한시장에서 도보 7분.","Mymy Fruit Chợ Hàn 3 Trần Quốc Toản Đà Nẵng"]]};
 var OP={"23-09:00":[["🏊","온수풀 마지막 물놀이","온수 패밀리풀·키즈클럽에서 마지막으로 놀기. 물놀이 후 샤워하고 옷 갈아입을 시간 30분은 잡아 두기.","","선택","체크아웃 전",""],["💆","호텔 스파","패키지 스파를 22일에 다 쓰지 않았으면 이때 이용(포함 횟수는 패키지 조건 확인), 아니면 유료. 11:30 체크아웃 전에 끝나게 전날 예약.","","","",""]],"22-12:00":["🛵","배달 음식 (그랩 푸드 등)","호텔까지 배달 가능(확인함). 음식은 객실이 아니라 호텔의 배달 음식 픽업 장소에서 받습니다. 픽업 장소 위치는 체크인 때 프런트에 확인. 기사 연락용 현지 유심·eSIM 준비, 배달료·소요 시간은 앱에서 확인. 아이용으로는 쌀국수·볶음밥·치킨·피자가 무난.",""]};
-function op(k,t){var v=OP[k+"-"+t];if(!v)return "";var L=Array.isArray(v[0])?v:[v];return '<div class="sb alt"><h4>'+L[0][4]+'<small>'+L[0][5]+'</small></h4>'+L.map(function(o){return '<div class="o"><span class="ic" aria-hidden="true">'+o[0]+'</span><div><b>'+esc(o[1])+'</b><p>'+esc(o[2])+'</p>'+(o[3]?lk(o[6]||"지도",o[3],"📍 "):"")+'</div></div>'}).join("")+'</div>'}
+function op(k,t){var v=OP[k+"-"+t];if(!v)return "";var L=Array.isArray(v[0])?v:[v];return '<div class="sb alt"><h4>'+L[0][4]+'<small>'+L[0][5]+'</small></h4>'+L.map(function(o){return '<div class="o"><span class="ic" aria-hidden="true">'+o[0]+'</span><div><b>'+esc(o[1])+'</b><p>'+esc(o[2])+'</p>'+(o[3]?lk(o[6]||"지도",o[3],"📍 "):"")+ka(o[1]+" "+(o[6]||""))+'</div></div>'}).join("")+'</div>'}
 var PR={"20-13:30":[["라탄백 소 / 대","8만~12만 / 15만~25만 동"],["라탄 모자","2만 동 안팎"],["크록스형 고무 샌들","14만~16만 동"],["원피스","8만~12만 동"],["하와이안 셔츠","6만~8만 동"],["건망고 1kg","20만~24만 동"],["캐슈넛 500g","10만~12만 동"],["망고젤리 1봉","2.4만~3만 동"],["(선택) 아오자이 맞춤 / 기성","35만~45만 / 15만~20만 동"]]};
 function pr(k,t){return PR[k+"-"+t]?'<div class="sh">₫ 한시장 물건 시세는 위쪽 <b>시세</b> 탭에서 확인</div>':""}
 var PRS=[
@@ -204,10 +209,14 @@ function sb(k,t){var a=SB[k+"-"+t];return a?'<div class="sb"><h4>함께 들르�
 var RV={"20-02:55":1,"20-04:00":1,"20-16:00":1,"22-14:30":1,"22-17:30":1};
 function ico(n){var R=[[/자유 시간/,"☕"],[/유람선|바구니배|소원배/,"🛶"],[/그랩|이동|복귀/,"🚕"],[/VJ8|공항|^다낭 도착/,"✈️"],[/온수|패밀리풀|물놀이/,"🏊"],[/비치|해변/,"🏖"],[/점심|저녁|조식|간식|풀바/,"🍽"],[/스파|마사지/,"💆"],[/쇼핑|롯데마트|장보기|과일/,"🛍"],[/성당|올드타운|불쇼|야시장|산책/,"📸"],[/체크인|체크아웃|취침|짐|낮잠|휴식/,"🏨"]];for(var i=0;i<R.length;i++)if(R[i][0].test(n))return R[i][1];return "📍"}
 var DF={"22-09:30":"리조트 휴식","22-14:30":"호텔 스파","23-09:00":"리조트 자유 시간"},DFL="3안만",DFD=["22","23"];
-var KA={"목식당":["카톡 채널로 예약","https://pf.kakao.com/_AxcgZxj"],"민 럭셔리 스파":["카톡 ID minluxuryspa",null]};
+var KA={"목식당":["카톡 채널로 예약","https://pf.kakao.com/_AxcgZxj"],"냐벱":["카톡 채널로 예약·배달","https://pf.kakao.com/_FICTG"],"템 하이산":["카톡 채널로 예약","https://pf.kakao.com/_BQqIG"],"마담 란":["카톡 채널로 예약","https://pf.kakao.com/_axocen"],"조조씨푸드":["카톡 ID ZOZOSEAFOOD",null],"민 럭셔리 스파":["카톡 ID minluxuryspa",null],"뷰스파":["카톡 채널로 예약","https://pf.kakao.com/_ULeqxj"]};
 function ka(t){var o=[];for(var n in KA){if(t.indexOf(n)>=0){var v=KA[n];o.push(v[1]?'<a class="kk" href="'+v[1]+'" target="_blank" rel="noopener">💬 '+n+' '+v[0]+'</a>':'<span class="kk">💬 '+n+' '+v[0]+'</span>')}}return o.length?'<div class="m">'+o.join("")+'</div>':""}
 var MENU={"안토이":"갈릭새우, 쌀국수, 곱창쌀국수, 파인애플볶음밥, 미꽝","티엔킴":"분짜, 반쎄오, 분짜하노이, 스프링롤·짜조","퍼꾸 하노이":"하노이식 소고기 쌀국수","냐고비엣":"곱창국수, 갈비살국수, 반쎄오","꼬바 퍼보":"소고기 쌀국수(퍼보)","냐벱":"곱창쌀국수, 스프링롤","분짜까 109":"어묵국수(분짜까)","포박하이":"쌀국수","쩌비엣":"반쎄오","반미 해피 브레드":"반미","피자 포피스":"부라타 치즈 피자","럭락":"연잎 연밥 볶음밥(시그니처), 분짜, 자두잼 돼지 삼겹살","반쎄오 바즈엉":"반쎄오, 넴루이","목식당":"가리비 파기름구이, 갈릭버터새우(직원이 까 줌)","조조씨푸드":"랍스터·크랩 플래터, 파인애플 볶음밥","템 하이산":"해산물 세트 메뉴(메뉴 고민 없이 주문)","웃번 껌떰":"양념 돼지갈비덮밥(껌떰), 닭고기덮밥","벱꾸온":"넴루이, 반쎄오, 분짜 세트","바빌론 스테이크 1호점":"스테이크 200~400g","바빌론 스테이크 2호점":"스테이크 200~400g","모닝글로리":"까오러우, 화이트로즈, 아이용 볶음밥","미스 리":"까오러우, 화이트로즈","반미 프엉":"반미","껌린":"오리구이","포슈아":"쌀국수, 미꽝, 화이트로즈, 모닝글로리(공심채) 볶음","바레웰":"숯불 돼지고기 꼬치(넴루이)·반쎄오·스프링롤 세트를 라이스페이퍼에 싸 먹기"};
 function mn(t){var o=[];for(var n in MENU){if(t.indexOf(n)>=0)o.push((Object.keys(MENU).filter(function(x){return t.indexOf(x)>=0}).length>1?n+": ":"")+MENU[n])}return o.length?'<div class="mn">🍴 추천 메뉴 · '+esc(o.join(" / "))+'</div>':""}
+var PH={"20-13:00":["Da Nang Cathedral pink church","다낭 핑크성당"],"20-13:30":["Han Market Da Nang","다낭 한시장"],"20-16:30":["Shilla Monogram Quangnam Danang pool","신라모노그램 다낭 수영장"],"21-12:00":["Cam Thanh coconut village basket boat Hoi An","호이안 코코넛마을 바구니배"],"21-14:30":["Hoi An Ancient Town Japanese Covered Bridge","호이안 올드타운"],"21-18:30":["Hoi An lantern boat night market","호이안 소원배 야시장"]};
+function ph(k,t){var a=PH[k+"-"+t];return a?'<div class="m"><a class="md" href="https://www.google.com/search?tbm=isch&q='+encodeURIComponent(a[0])+'" target="_blank" rel="noopener">📷 사진 보기</a><a class="md" href="https://www.youtube.com/results?search_query='+encodeURIComponent(a[1])+'" target="_blank" rel="noopener">▶ 영상 보기</a></div>':""}
+var IMG={"20-13:00":["https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Da_Nang_Cathedral_-_Da_Nang%2C_Vietnam_-_DSC02464.JPG/500px-Da_Nang_Cathedral_-_Da_Nang%2C_Vietnam_-_DSC02464.JPG","다낭 대성당(핑크성당) 정면","Daderot","CC0","https://commons.wikimedia.org/wiki/File:Da_Nang_Cathedral_-_Da_Nang,_Vietnam_-_DSC02464.JPG"],"20-13:30":["https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Han_Market_-_Da_Nang%2C_Vietnam_-_DSC02375.JPG/500px-Han_Market_-_Da_Nang%2C_Vietnam_-_DSC02375.JPG","한시장 내부","Daderot","CC0","https://commons.wikimedia.org/wiki/File:Han_Market_-_Da_Nang,_Vietnam_-_DSC02375.JPG"],"21-12:00":["https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Basket_Boat_and_the_Bamboo_forest_%28Unsplash%29.jpg/500px-Basket_Boat_and_the_Bamboo_forest_%28Unsplash%29.jpg","코코넛마을 바구니배","Chester Ho chesterho","CC0","https://commons.wikimedia.org/wiki/File:Basket_Boat_and_the_Bamboo_forest_(Unsplash).jpg"],"21-14:30":["https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/H%E1%BB%99i_An%2C_Ch%C3%B9a_C%E1%BA%A7u%2C_2020-01_CN-02.jpg/500px-H%E1%BB%99i_An%2C_Ch%C3%B9a_C%E1%BA%A7u%2C_2020-01_CN-02.jpg","호이안 내원교(일본교)","Steffen Schmitz","CC BY-SA 4.0","https://commons.wikimedia.org/wiki/File:H%E1%BB%99i_An,_Ch%C3%B9a_C%E1%BA%A7u,_2020-01_CN-02.jpg"],"21-18:30":["https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Hoi_An_-_HoiAn1441.jpg/500px-Hoi_An_-_HoiAn1441.jpg","호이안 투본강 소원배와 야경","lumoplank","CC0","https://commons.wikimedia.org/wiki/File:Hoi_An_-_HoiAn1441.jpg"]};
+function im(k,t){var a=IMG[k+"-"+t];return a?'<figure class="th"><img src="'+a[0]+'" alt="'+a[1]+'" loading="lazy" width="500" height="375"><figcaption>사진 <a href="'+a[4]+'" target="_blank" rel="noopener">'+esc(a[2])+' · '+a[3]+'</a> (위키미디어 공용)</figcaption></figure>':""}
 function su(k,t){var a=SU[k+"-"+t];return a?'<div class="sh">🚌 셔틀 대안: '+a+'</div>':""}
 var RT=[
 ["다낭 시내 · 한시장 권역","한시장에서 도보 10분 안쪽이 대부분",[
@@ -283,7 +292,7 @@ function show(i){
   }else{
     var d=D[k];
     h='<div class="head"><div><h2>1월 '+d.k+'일 ('+d.w+')</h2><p>'+esc(d.t)+'</p></div><span class="tag">'+esc(d.tag)+'</span></div><ol>'+d.it.map(function(x){
-      var dk=DF[d.k+"-"+x[0]];return '<li class="'+(x[3]?'p ':'')+(dk?'dfi':'')+'"><span class="ic2" aria-hidden="true">'+ico(x[1])+'</span><div class="t">'+x[0]+'</div><div class="n">'+esc(x[1])+(dk?'<em class="df">'+DFL+' · '+dk+'</em>':'')+(RV[d.k+"-"+x[0]]?'<em class="rv">예약필요</em>':'')+(x[3]?'<i>'+esc(x[3])+'</i>':'')+'</div>'+(x[2]?'<div class="d">'+esc(x[2])+'</div>':'')+(/점심|저녁/.test(x[1])?mn(x[1]):'')+maps(d.k,x[0])+ka(x[1])+sb(d.k,x[0])+pr(d.k,x[0])+op(d.k,x[0])+su(d.k,x[0])+rc(d.k,x[0])+'</li>'}).join("")+'</ol>';
+      var dk=DF[d.k+"-"+x[0]];return '<li class="'+(x[3]?'p ':'')+(dk?'dfi':'')+'"><span class="ic2" aria-hidden="true">'+ico(x[1])+'</span><div class="t">'+x[0]+'</div><div class="n">'+esc(x[1])+(dk?'<em class="df">'+DFL+' · '+dk+'</em>':'')+(RV[d.k+"-"+x[0]]?'<em class="rv">예약필요</em>':'')+(x[3]?'<i>'+esc(x[3])+'</i>':'')+'</div>'+(x[2]?'<div class="d">'+esc(x[2])+'</div>':'')+im(d.k,x[0])+(/점심|저녁/.test(x[1])?mn(x[1]):'')+maps(d.k,x[0])+ph(d.k,x[0])+(/이동/.test(x[1])?"":ka(x[1]))+sb(d.k,x[0])+pr(d.k,x[0])+op(d.k,x[0])+su(d.k,x[0])+rc(d.k,x[0])+'</li>'}).join("")+'</ol>';
   }
   view.innerHTML=h;window.scrollTo(0,0);
 }
