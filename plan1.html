@@ -73,6 +73,7 @@ nav button.dfd b::after{content:"";display:inline-block;width:6px;height:6px;bor
 .th img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:10px;background:var(--line)}
 .th figcaption{font-size:11px;color:var(--sub);margin-top:3px}
 .th figcaption a{color:var(--sub)}
+.m a.bk{color:var(--ink);border-color:var(--line);background:var(--card);font-weight:700}
 .sh{font-size:12px;color:var(--teal);background:var(--tealbg);border-radius:8px;padding:6px 10px;margin-top:6px}
 .cards{display:grid;gap:10px;margin-top:10px}
 .c{background:var(--card);border:1px solid var(--line);padding:14px}
@@ -105,7 +106,7 @@ var D=[
 ["20:30","인천공항 제1터미널 집결, 수속","출발 3시간 전. 환전은 현지 한시장 금은방이 유리하니 소액만 준비."],
 ["23:50","VJ875 출발","기내식 없음. 아이들 간식과 목베개 챙기기."]]},
 {k:"20",w:"수",t:"도착 · 시내 맛집 · 리조트 입실",tag:"0.5박 → 신라 모노그램",it:[
-["02:55","다낭 도착, 입국 후 픽업 차량 탑승","단독 7인승 1대(짐 4개 이하) 또는 그랩 2대."],
+["02:55","다낭 도착, 입국 패스트트랙 → 16인승 픽업 차량 탑승","새벽 도착편이 몰려 입국심사 줄이 긴 시간대라 입국 패스트트랙으로 우선 통과. 마이리얼트립 상품으로 성인 4·아동 2 입국 패스트트랙 + 16인승 픽업 1회 묶음. 링크 상품 기준: 다낭공항 이미그레이션(입국심사) 입구에서 직원 미팅. 예약 후 마이리얼트립 파트너 채널로 이름·항공편(VJ875) 양식을 꼭 보내야 진행되고, 만나는 시간은 확정 후 조율. 픽업 기사 미팅 장소는 확정 안내에서 확인. 취소는 여행 4일 전까지 전액 환불, 3일 전부터는 환불 불가.","6명 75,300원"],
 ["04:00","M 빌리지 호텔 다낭 센터 체크인, 취침","177 Trần Phú, 다낭 대성당 바로 앞, 한시장 도보 3분. 공항에서 2.9km, 차 10~15분. 24시간 프런트. 1박으로 예약해 두면 새벽 입실이 확실합니다. 1박 비교(아고다): M 빌리지 1실 49,312원 vs 후보 아보라 호텔 1실 32,236원.","2실 98,624원"],
 ["12:00","체크아웃, 짐 맡기고 점심: 안토이 (Ăn Thôi, 114 Bạch Đằng)","숙소에서 한시장 건너 강변 쪽, 도보권(지도에서 확인). 한시장까지 도보 3분. 반쎄오, 쌀국수, 마늘 모닝글로리. 에어컨·한국어 메뉴판. 12시는 점심 피크라 대기가 있으니 도착하자마자 번호표부터 받으세요. 아이가 국물을 싫어하면 반쎄오나 콩카페 거리 반미로."],
 ["13:00","다낭 대성당(핑크성당) 구경","안토이에서 도보 5분 안팎(지도에서 확인). 한시장 바로 옆이라 쇼핑 전에 먼저 둘러봅니다."],
@@ -155,7 +156,7 @@ var B=[
 ["신라 모노그램 2박 2실","아고다 1/20~22 최저 객실, 세금 포함으로 계산","1박 209,587원 × 2박 × 2실.","838,348"],
 ["힐튼 다낭 1박 2실","킹룸 리버뷰, 어른 2 + 아이 1, 조식 포함 1실 214,095원","아이 조식 포함 요금, 세금 포함.","428,190"],
 ["아동 추가요금 (신라 정책)","6~12세 조식 + 간이침대 1박 577,500동","2박 × 2명.","124,700"],
-["새벽 공항 픽업","단독 7인승 1대, 23시 이후 할증 포함","그랩 2대 이용 시 약 20,000원.","25,000"],
+["입국 패스트트랙 + 공항 픽업","마이리얼트립 입국 패스트트랙 성인 4·아동 2 + 16인승 픽업 1회","새벽 도착 입국심사 우선 통과, 짐이 많아도 차 한 대로 이동.","75,300"],
 ["그랩 이동 10회","7인승 기준 시내 편도 7,000~13,000원","1/20 1회 12,000 · 1/21 3회 31,000 · 1/22 5회 41,000 · 1/23 1회 8,000. 야간·우천 할증 시 10~20% 추가.","92,000"],
 ["호이안 현지 요금","마을 입장, 바구니배 6명, 올드타운 입장권 6명, 소원배 2척","약 2,500,000동. 바구니배·소원배는 흥정가 기준.","135,000"],
 ["식비 (추정)","1인 1일 30,000원 × 6명 × 3.5일","조식은 호텔 포함, 점심·저녁은 모두 밖에서.","630,000"],
@@ -233,6 +234,8 @@ var PH={"20-13:00":["Da Nang Cathedral pink church","다낭 핑크성당"],"20-1
 function ph(k,t){var a=PH[k+"-"+t];return a?'<div class="m"><a class="md" href="https://www.google.com/search?tbm=isch&q='+encodeURIComponent(a[0])+'" target="_blank" rel="noopener">📷 사진 보기</a><a class="md" href="https://www.youtube.com/results?search_query='+encodeURIComponent(a[1])+'" target="_blank" rel="noopener">▶ 영상 보기</a></div>':""}
 var IMG={"20-13:00":["https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Da_Nang_Cathedral_-_Da_Nang%2C_Vietnam_-_DSC02464.JPG/500px-Da_Nang_Cathedral_-_Da_Nang%2C_Vietnam_-_DSC02464.JPG","다낭 대성당(핑크성당) 정면","Daderot","CC0","https://commons.wikimedia.org/wiki/File:Da_Nang_Cathedral_-_Da_Nang,_Vietnam_-_DSC02464.JPG"],"20-13:30":["https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Han_Market_-_Da_Nang%2C_Vietnam_-_DSC02375.JPG/500px-Han_Market_-_Da_Nang%2C_Vietnam_-_DSC02375.JPG","한시장 내부","Daderot","CC0","https://commons.wikimedia.org/wiki/File:Han_Market_-_Da_Nang,_Vietnam_-_DSC02375.JPG"],"21-12:00":["https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Basket_Boat_and_the_Bamboo_forest_%28Unsplash%29.jpg/500px-Basket_Boat_and_the_Bamboo_forest_%28Unsplash%29.jpg","코코넛마을 바구니배","Chester Ho chesterho","CC0","https://commons.wikimedia.org/wiki/File:Basket_Boat_and_the_Bamboo_forest_(Unsplash).jpg"],"21-14:30":["https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/H%E1%BB%99i_An%2C_Ch%C3%B9a_C%E1%BA%A7u%2C_2020-01_CN-02.jpg/500px-H%E1%BB%99i_An%2C_Ch%C3%B9a_C%E1%BA%A7u%2C_2020-01_CN-02.jpg","호이안 내원교(일본교)","Steffen Schmitz","CC BY-SA 4.0","https://commons.wikimedia.org/wiki/File:H%E1%BB%99i_An,_Ch%C3%B9a_C%E1%BA%A7u,_2020-01_CN-02.jpg"],"21-18:30":["https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Hoi_An_-_HoiAn1441.jpg/500px-Hoi_An_-_HoiAn1441.jpg","호이안 투본강 소원배와 야경","lumoplank","CC0","https://commons.wikimedia.org/wiki/File:Hoi_An_-_HoiAn1441.jpg"],"22-20:20":["https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/C%E1%BA%A7u_R%E1%BB%93ng.jpg/500px-C%E1%BA%A7u_R%E1%BB%93ng.jpg","다낭 용다리","Bùi Thụy Đào Nguyên","CC BY-SA 3.0","https://commons.wikimedia.org/wiki/File:C%E1%BA%A7u_R%E1%BB%93ng.jpg"]};
 function im(k,t){var a=IMG[k+"-"+t];return a?'<figure class="th"><img src="'+a[0]+'" alt="'+a[1]+'" loading="lazy" width="500" height="375"><figcaption>사진 <a href="'+a[4]+'" target="_blank" rel="noopener">'+esc(a[2])+' · '+a[3]+'</a> (위키미디어 공용)</figcaption></figure>':""}
+var BK={"20-02:55":["🎫 마이리얼트립 상품 보기","https://experiences.myrealtrip.com/products/3520268"]};
+function bk(k,t){var a=BK[k+"-"+t];return a?'<div class="m"><a class="bk" href="'+a[1]+'" target="_blank" rel="noopener">'+a[0]+'</a></div>':""}
 function su(k,t){var a=SU[k+"-"+t];return a?'<div class="sh">🚌 셔틀 대안: '+a+'</div>':""}
 var RT=[
 ["다낭 시내 · 한시장 권역","한시장에서 도보 10분 안쪽이 대부분",[
@@ -275,9 +278,9 @@ function rc(k,t){var a=RC[k+"-"+t];return a?'<div class="m r"><span>🍽 다른 
 function maps(k,t){var a=M[k+"-"+t];return a?'<div class="m">'+a.map(function(p){return '<a href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(p[1])+'" target="_blank" rel="noopener">📍 '+p[0]+'</a>'}).join("")+'</div>':""}
 var OV=[["항공권 6명 왕복","2,661,600원","성인 444,100 × 4 + 어린이 442,600 × 2, 세금·수수료 포함"],
 ["숙박비 (2실 합계, 세금 포함)","약 149만 원","M 빌리지 0.5박 9.9만 + 신라 2박 83.8만 + 힐튼 킹룸 리버뷰 조식 포함 42.8만 + 신라 아동 요금 12.5만"],
-["이동 + 현지요금","약 30만 원","공항 픽업 2.5만 + 그랩 10회 9.2만 + 호이안 현지 13.5만 + 한강 유람선 4.9만"],
-["총예산 (항공 포함, 쇼핑 제외)","약 517만 원","숙박은 모두 세금 포함. 식비 63만, 유람선 4.9만, 22일 민 럭셔리 스파 9.1만 포함"],
-["가족당 부담","약 259만 원","항공 포함, 쇼핑 제외"],
+["이동 + 현지요금","약 35만 원","입국 패스트트랙·픽업 7.5만 + 그랩 10회 9.2만 + 호이안 현지 13.5만 + 한강 유람선 4.9만"],
+["총예산 (항공 포함, 쇼핑 제외)","약 522만 원","숙박은 모두 세금 포함. 식비 63만, 유람선 4.9만, 22일 민 럭셔리 스파 9.1만 포함"],
+["가족당 부담","약 261만 원","항공 포함, 쇼핑 제외"],
 ["2안과 다른 점","신라 2박 + 힐튼 1박","22일에 시내 힐튼으로 옮겨 롯데마트 쇼핑과 유람선 불쇼(한시장 추가 쇼핑은 선택). 22일 저녁엔 민 스파·목식당 후 유람선. 23일은 시내 점심 후 공항까지 10~15분. 대신 짐을 한 번 더 옮기고 마지막 날 리조트 수영은 없음"]];
 var FL=[["비엣젯 VJ875 · 1월 19일 (화) · 직항 5시간 5분","인천 23:50 → 다낭 02:55 (+1일)","1월 20일 새벽 도착. 입국심사와 수하물까지 40~50분 예상."],
 ["비엣젯 VJ874 · 1월 23일 (토) · 직항 4시간 20분","다낭 16:20 → 인천 22:40","14:00까지 공항 도착. 힐튼 다낭에서 공항까지 차로 10~15분."]];
@@ -304,11 +307,11 @@ function show(i){
     h='<div class="head"><div><h2>한시장 시세표</h2><p>흥정 전에 알아 둘 기준가 · 1,000동 ≈ 54원 · 매장 호수는 모두 2층</p></div></div><div class="cards">'+PRS.map(function(g){return '<div class="c"><b>'+g.ic+' '+g.t+(g.note?'<small style="display:inline;margin-left:6px">'+g.note+'</small>':'')+'</b><table class="pt"><tbody>'+g.rows.map(function(r){return "<tr><td>"+esc(r[0])+"</td><td>"+esc(r[1])+"</td></tr>"}).join("")+'</tbody></table>'+(g.chk.length?'<ul>'+g.chk.map(function(x){return "<li>"+esc(x)+"</li>"}).join("")+'</ul>':'')+(g.shop?'<p class="ps">추천 매장 (2층): '+esc(g.shop)+'</p>':'')+'</div>'}).join("")+'<div class="c"><b>💰 한시장 쇼핑 꿀팁</b><ul>'+PRTIP.map(function(x){return "<li>"+esc(x)+"</li>"}).join("")+'</ul><p class="ps">영업시간 07:00~19:00 (카페 글 기준)</p></div></div><p class="d">출처: 네이버 카페 다낭고스트 「한시장 시세표 2026」 정리 글. 가게와 흥정에 따라 달라집니다.</p>';
   }else if(k==="bd"){
     var r=B.map(function(x){return "<tr><td>"+esc(x[0])+"</td><td>"+esc(x[1])+(x[2]?"<small>"+esc(x[2])+"</small>":"")+"</td><td>"+x[3]+"</td></tr>"}).join("");
-    h='<div class="head"><div><h2>예산표 (2가족 6명 합계)</h2></div></div><div class="tbl"><table><thead><tr><th>항목</th><th>근거</th><th>금액(원)</th></tr></thead><tbody>'+r+'</tbody><tfoot><tr><td>합계 (항공 포함, 쇼핑 제외)</td><td>가족당 약 2,586,000원<small>항공 제외 시 2,511,182원. 숙박은 모두 세금 포함. 2안보다 약 21만 원(가족당 약 11만 원) 저렴.</small></td><td>5,172,782</td></tr></tfoot></table></div>';
+    h='<div class="head"><div><h2>예산표 (2가족 6명 합계)</h2></div></div><div class="tbl"><table><thead><tr><th>항목</th><th>근거</th><th>금액(원)</th></tr></thead><tbody>'+r+'</tbody><tfoot><tr><td>합계 (항공 포함, 쇼핑 제외)</td><td>가족당 약 2,612,000원<small>항공 제외 시 2,561,482원. 숙박은 모두 세금 포함. 2안보다 약 21만 원(가족당 약 11만 원) 저렴.</small></td><td>5,223,082</td></tr></tfoot></table></div>';
   }else{
     var d=D[k];
     h='<div class="head"><div><h2>1월 '+d.k+'일 ('+d.w+')</h2><p>'+esc(d.t)+'</p></div><span class="tag">'+esc(d.tag)+'</span></div><ol>'+d.it.map(function(x){
-      var dk=DF[d.k+"-"+x[0]];return '<li class="'+(x[3]?'p ':'')+(dk?'dfi':'')+'"><span class="ic2" aria-hidden="true">'+ico(x[1])+'</span><div class="t">'+x[0]+'</div><div class="n">'+esc(x[1])+(dk?'<em class="df">'+DFL+' · '+dk+'</em>':'')+(RV[d.k+"-"+x[0]]?'<em class="rv">예약필요</em>':'')+(x[3]?'<i>'+esc(x[3])+'</i>':'')+'</div>'+(x[2]?'<div class="d">'+esc(x[2])+'</div>':'')+im(d.k,x[0])+(/점심|저녁/.test(x[1])?mn(x[1]):'')+maps(d.k,x[0])+ph(d.k,x[0])+(/이동/.test(x[1])?"":ka(x[1]))+sb(d.k,x[0])+pr(d.k,x[0])+op(d.k,x[0])+su(d.k,x[0])+rc(d.k,x[0])+'</li>'}).join("")+'</ol>';
+      var dk=DF[d.k+"-"+x[0]];return '<li class="'+(x[3]?'p ':'')+(dk?'dfi':'')+'"><span class="ic2" aria-hidden="true">'+ico(x[1])+'</span><div class="t">'+x[0]+'</div><div class="n">'+esc(x[1])+(dk?'<em class="df">'+DFL+' · '+dk+'</em>':'')+(RV[d.k+"-"+x[0]]?'<em class="rv">예약필요</em>':'')+(x[3]?'<i>'+esc(x[3])+'</i>':'')+'</div>'+(x[2]?'<div class="d">'+esc(x[2])+'</div>':'')+im(d.k,x[0])+(/점심|저녁/.test(x[1])?mn(x[1]):'')+maps(d.k,x[0])+bk(d.k,x[0])+ph(d.k,x[0])+(/이동/.test(x[1])?"":ka(x[1]))+sb(d.k,x[0])+pr(d.k,x[0])+op(d.k,x[0])+su(d.k,x[0])+rc(d.k,x[0])+'</li>'}).join("")+'</ol>';
   }
   view.innerHTML=h;window.scrollTo(0,0);
 }
